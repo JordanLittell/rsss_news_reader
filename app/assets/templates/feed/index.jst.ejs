@@ -1,0 +1,9 @@
+<a href="#/feeds/new">Create New Feed</a>
+<ul>
+  <% feeds.each (function(feed) { %>
+    <li>
+      <a href="#/feeds/<%= feed.get('id') %>"><%= feed.get('title') %></a>
+      <button class="delete-feed" data-feed-id="<%= feed.get('id')%>">Delete feed</button>
+    </li>
+  <% }); %>
+</ul>
