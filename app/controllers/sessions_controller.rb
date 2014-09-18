@@ -4,9 +4,10 @@ class SessionsController < ApplicationController
     user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if user
       login!(user)
-      render :json => user
+      redirect_to root_url
     else
-      render :json => user.errors.full_messages
+      flash[:errors] = ["There was a problem with your submission"]
+      render "new"
     end
   end
   
@@ -17,7 +18,7 @@ class SessionsController < ApplicationController
   
   def new
     @user = User.new()
-    render :json => @user
+    render 
   end
   
 end

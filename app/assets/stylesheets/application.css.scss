@@ -11,25 +11,9 @@
  *= require_self
  *= require_tree .
  */
-
-*{
-  font-style: sans-serif;
-  font-weight: 100;
-}
-label{
-  display:block;
-  margin-bottom: 5%;
-}
-h1{
-  color:"#C8C8C8";
-}
-body{
-  background-image: url('http://dreaming-earth.com/wp-content/uploads/2014/08/journal.jpg');
-  background-size: cover;
+ @import "bootstrap";
+ 
+ul {
+  list-style: none;
 }
 
-form{
-  color: white ;
-  background: rgba(30,30,30,0.7);
-  background-repeat: no-repeat;
-}

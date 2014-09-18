@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   pool: 5
   timeout: 5000
-  username: appacademy
+  username: jordanlittell
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
