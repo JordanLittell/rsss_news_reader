@@ -9,6 +9,14 @@ window.NewsReader.Models.Feed = Backbone.Model.extend({
     }
     return serverData;
   },
+
+  likes: function() {
+    if(!this._likes) {
+      this._likes = new NewsReader.Collections.Likes({},{feed:this});
+    }
+    return this._likes;
+  },
+
   entries: function () {
     if (this._entries) {
       return this._entries;

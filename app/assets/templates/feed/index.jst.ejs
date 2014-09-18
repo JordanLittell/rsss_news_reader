@@ -1,15 +1,23 @@
-<div class="row">
+	<div class="row">
 
 	<table class="table">
-	
+
 	  <% feeds.each (function(feed) { %>
 	  <tr>
-	    <td>
-	      <a href="#/feeds/<%= feed.get('id') %>"><%= feed.get('title') %></a>
-	      <button class="delete-feed btn btn-danger pull-right" data-feed-id="<%= feed.get('id')%>">Delete feed</button>
+
+		<td>
+			<a href="#/feeds/<%= feed.get('id') %>"><%= feed.get('title') %></a>
+		</td>
+		<td>
+		<button class="btn btn-primary large" id="button-like" data-feed-id="<%=feed.get('id')%>">Like Feed</button>
+		</td>
+
+		<td>
+	      <button class="delete-feed btn btn-danger" data-feed-id="<%= feed.get('id')%>">Delete feed</button>
 	    </td>
+
 	    </tr>
 	  <% }); %>
 	  
 	</table>
-</div>
+	</div>

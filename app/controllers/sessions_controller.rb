@@ -13,7 +13,8 @@ class SessionsController < ApplicationController
   
   def destroy
     logout!
-    render :json => "sup"
+    redirect_to root_url
+    flash[:success] = ["you have logged out"]
   end
   
   def new
